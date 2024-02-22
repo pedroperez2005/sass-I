@@ -1,0 +1,107 @@
+/* main */
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: auto;
+    grid-template-areas: "left left right right";
+    gap: 20px;
+
+    & .hero__left {
+        grid-area: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+
+        h1 {
+            font-size: 2.4rem;
+            color: $second-color;
+        }
+
+        p {
+            color: $second-color;
+            font-size: 1.6rem;
+        }
+
+        a {
+            background-color: $second-color;
+            color: $mainColor;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            min-width: 300px;
+            max-width: 50%;
+        }
+
+        b {
+            color: $mainColor;
+
+        }
+
+        &__users {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 100%;
+                object-fit: cover;
+                border: 2px solid $second-color;
+                margin: -10px;
+            }
+        }
+    }
+
+    .hero__right {
+        grid-area: right;
+        padding: 20px;
+        position: relative;
+
+        img {
+            width: 100%;
+            min-height: 800px;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        &__title {
+            padding: 20px;
+            background-color: $second-color;
+            border-radius: 10px;
+            font-size: 1rem;
+
+            .bluebar {
+                background-color: $mainColor;
+                width: 30%;
+                height: 15px;
+                border-radius: 50px;
+                display: inline-block;
+            }
+
+            .graybar {
+                background-color: rgb(92, 92, 92);
+                width: 70%;
+                height: 15px;
+                border-radius: 50px;
+                display: inline-block;
+            }
+        }
+
+        .c1 {
+            position: absolute;
+            bottom: 30%;
+            left: -20%;
+        }
+
+        .c2 {
+            position: absolute;
+            bottom: 10%;
+            left: -15%;
+        }
+    }
+}

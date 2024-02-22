@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+
+    &__brand,
+    &-link {
+        color: $second-color;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &-list {
+        display: flex;
+        gap: 43px;
+    }
+
+    &-btn {
+        background-color: $second-color;
+        color: $mainColor;
+        padding: 10px 14px;
+        border-radius: 10px;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: $mainColor;
+            color: $second-color;
+        }
+    }
+}
